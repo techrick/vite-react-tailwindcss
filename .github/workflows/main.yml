@@ -14,7 +14,7 @@ jobs:
         run: npm install
 
       - name: Build 🔧 # Build static web app
-        run: npm run build
+        run: npm run build -- --base=/vite-react-tailwindcss/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
