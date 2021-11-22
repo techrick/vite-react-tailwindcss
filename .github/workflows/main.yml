@@ -13,8 +13,8 @@ jobs:
       - name: Install 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: npm install
 
-      - name: Build 🔧 # Build static web app
-        run: npm run build -- --base=/vite-react-tailwindcss/
+      - name: Build 🔧 # Build static web app. Base path is the repository name.
+        run: npm run build -- --base=${GITHUB_REPOSITORY#*/}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
